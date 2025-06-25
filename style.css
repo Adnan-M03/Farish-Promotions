@@ -1,0 +1,67 @@
+html{
+    background-color: #260F06;
+}
+.child{
+    margin-left: 50vw;
+    margin-bottom: 12px;
+    transform:translateX(-50%);
+    background-color: #0D0000;
+    width: 65vw;
+    height:220px;
+    border: solid 1px #D96E11;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    transition: box-shadow 200ms,bottom 200ms, left 200ms;    
+    &:hover{
+        box-shadow: 0 0 15px rgba(217, 110, 17, 0.5);
+        position: relative;
+        bottom: 3px;
+        left: 1px;
+    }
+}
+.dad{
+    width: 120px;
+    height: 30px;
+    overflow: hidden;
+    background: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    & .circle{
+        width: 25px;
+        height: 25px;
+        background: aqua;
+        border-radius: 50%;
+        position: relative;
+        bottom: 10px;
+        right: 10px;
+        transition: width 400ms ease, height 400ms ease, bottom 400ms ease, right 400ms ease;
+    }
+    & span{
+        position: relative;
+        z-index: 2;
+        font-size: 16px;
+    }
+}
+.dad:hover{
+    & .circle{
+        width: 180px;
+        height: 180px;
+        bottom: 50px;
+        right: 30px;
+    }
+}
+.contact-container{
+    
+    & form{
+        display: flex;
+        flex-direction: column;
+    }
+    width: 50%;
+}
+.contact{
+    color: gold;
+    text-decoration: none;
+}
+
+
