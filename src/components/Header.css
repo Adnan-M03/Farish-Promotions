@@ -1,0 +1,36 @@
+
+:root {
+    /* Fonts Sizing */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+
+  /* Color Pallete */
+  --color-orange-primary: #D96E11;
+  --color-orange-dark:    #734002;
+  --color-brown-medium:   #402401;
+  --color-brown-dark:     #260F06;
+  --color-near-black:     #0D0000;
+
+  --color-white: #ffffff;
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+}
+
+nav,.head-logo,.head-nav{
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    background: var(--color-orange-primary);
+    color:var(--color-white);
+    border: none;
+    padding: var(--font-size-sm);
+    font-size: var(--font-size-base);
+}

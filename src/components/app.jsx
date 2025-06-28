@@ -1,11 +1,30 @@
-import React from "react";
+import Header from "./Header";
+import Main from "./Main";
+import Footer from "./Footer";
+import Service from "./Service";
+import About from "./About";
+import WhySection from "./WhySection";
+import Contact from "./Contact";
+import Minfooter from "./Minfooter";
+
+
+
+import "./index.css"
 
 function App() {
     return (
-        <div>
-            <h1>Welcome to My React Starter App!</h1>
-            <p>Edit <code>App.jsx</code> and save to reload.</p>
-        </div>
+        <>
+            <Header/>
+            <Main>
+                <Service/>
+                <About/>
+                <WhySection/>
+            </Main>
+            <Footer>
+                <Contact/>
+                <Minfooter/>
+            </Footer>
+        </>
     );
 }
 
