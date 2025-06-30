@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* Fonts Sizing */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+
+  /* Color Pallete */
+  --color-orange-primary: #D96E11;
+  --color-orange-light:   #EBB866;
+  --color-orange-dark:    #734002;
+  --color-brown-medium:   #402401;
+  --color-brown-dark:     #260F06;
+  --color-brown-darker:   #170903;
+  --color-near-black:     #0D0000;
+
+  --color-white:          #ffffff;
+  --color-gray-50:        #f8fafc;
+  --color-gray-100:       #f1f5f9;
+
+    /* Spacing */
+  --spacing-none: 0rem;   /* 0px */
+  --spacing-xxs: 0.25rem; /* 4px */
+  --spacing-xs: 0.5rem;   /* 8px */
+  --spacing-sm: 0.75rem;  /* 12px */
+  --spacing-md: 1rem;     /* 16px (base unit) */
+  --spacing-lg: 1.5rem;   /* 24px */
+  --spacing-xl: 2rem;     /* 32px */
+  --spacing-2xl: 3rem;    /* 48px */
+  --spacing-3xl: 4rem;   /* 64px */
+  --spacing-4xl: 6rem;  /* 96px */
+  --spacing-section: 7.5rem; /* 120px (for larger section breaks) */
+}
+
+*{
+    padding: 0%;
+    margin: 0;
+}
+
+h1,h2,h3,h4,p{
+    color: var(--color-gray-50);
+}
+img{
+    width:120px;
+}
+html{
+    background-color: var(--color-near-black);
+}

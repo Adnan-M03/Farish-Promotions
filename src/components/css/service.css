@@ -1,0 +1,41 @@
+.main-service-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(10,1fr);
+    row-gap: 5px;
+    &>.title{
+        font-size: var(--font-size-xl);
+        grid-row: 1/2;
+        grid-column: 1/4;
+        justify-self: center;
+        & img{
+            width: 18.75rem !important; /*300px*/
+            margin-left: -1rem;
+        }
+    }
+
+    &>.SMM,.ADS,.CC,.IM{
+        background-color:var(--color-brown-medium) ;
+        opacity: .5;
+        display: grid;
+        grid-template-areas: 
+                        "img h4 h4 ."
+                        "img p p";
+        & h4,p{
+            display: inline;
+        } 
+    }
+    
+}
+.SMM{
+    grid-row:5/9 ;
+}
+.ADS{
+    grid-row: 3/7;
+}
+.CC{
+    grid-row: 5/9;
+}
+.IM{
+    grid-row: 8/11;
+}
