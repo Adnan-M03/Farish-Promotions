@@ -9,7 +9,7 @@ import Minfooter from "./Minfooter";
 
 
 
-import "./index.css"
+import "./css/index.css"
 
 function App() {
     return (

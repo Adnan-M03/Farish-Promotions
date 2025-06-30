@@ -1,4 +1,4 @@
-import "./Header.css"
+import "./css/header.css"
 
 function Header() {
     return (
@@ -6,8 +6,8 @@ function Header() {
             <header>
                 <nav>
                     <div className="head-logo">
-                        <img src="../src/assets/images/smalllogo.png" alt="" width={120}/>
-                        <p>Farish Promotions</p>
+                        <img src="../src/assets/images/smalllogo.png" alt="Small logo on the navigation bar"/>
+                        <p>FARISH PROMOTIONS</p>
                     </div>
                     <div className="head-nav">
                         <p>Service</p>
@@ -20,8 +20,9 @@ function Header() {
                         <h1>Unlock your brands digital potential</h1>
                         <p>Transforming online presence into tangible growth and measurable success</p>
                         <button>Work With Us</button>
+                        
                     </div>
-                    <img src="../src/assets/images/biglogo.png" alt="" width={120}/>
+                        <img src="../src/assets/images/biglogo.png" alt="" />
                 </div>
             </header>
         </>

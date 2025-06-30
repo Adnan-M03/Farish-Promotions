@@ -1,11 +1,14 @@
+import "./css/service.css"
 
 function Service(){
     return (
     <>
-        <div className="main-service-title">
-            <h2>Our Expert <span>Services</span></h2>
-        </div>
+        
         <div className="main-service-grid">
+            <div className="title">
+                <h2>Our Expert <span>Services</span></h2>
+                <img src="../src/assets/images/vectorUnderline.svg" alt="" />
+            </div>
             <div className="SMM">
                 <img src="src\assets\images\SMM 4.png" alt="" />
                 <h4>Social Media Management</h4>
