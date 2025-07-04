@@ -1,41 +1,113 @@
-.main-service-grid{
+.main-service-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(10,1fr);
-    row-gap: 5px;
-    &>.title{
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    font-family: 'Lora', Arial, sans-serif;
+
+    &>.title {
         font-size: var(--font-size-xl);
-        grid-row: 1/2;
-        grid-column: 1/4;
         justify-self: center;
-        & img{
-            width: 18.75rem !important; /*300px*/
+
+        & span {
+            color: var(--color-orange-primary);
+        }
+
+        & img {
+            width: clamp(16rem, 35vw + 0.5rem, 25rem) !important;
+            /*300px*/
             margin-left: -1rem;
         }
     }
 
-    &>.SMM,.ADS,.CC,.IM{
-        background-color:var(--color-brown-medium) ;
-        opacity: .5;
+    &>.SMM,
+    .ADS,
+    .CC,
+    .IM {
+        justify-self: center;
+        max-width: 40rem;
+        margin: 1rem;
+        padding: .5rem;
         display: grid;
-        grid-template-areas: 
-                        "img h4 h4 ."
-                        "img p p";
-        & h4,p{
-            display: inline;
-        } 
+        background-color: rgb(var(--color-brown-darkrgb), .2);
+        display: flex;
+        border: 1px solid var(--color-brown-medium);
+        border-radius: 5px;
+
+        & img {
+            object-fit: contain;
+            width: 5.5rem;
+            justify-self: center;
+        }
+
+        & h4 {
+            /* text-shadow: 1px 1px 1px #FFA800, -1px -1px 1px #FFA800; */
+            -webkit-text-stroke: .1px #ffaa00;
+        }
+
+        & p {
+            font-family: 'Inter', Arial, sans-serif;
+        }
     }
-    
 }
-.SMM{
-    grid-row:5/9 ;
+
+@media (min-width: 767px) {
+
+    &>.SMM,
+    .ADS,
+    .CC,
+    .IM {
+        & img {
+            width: 6rem;
+        }
+    }
 }
-.ADS{
-    grid-row: 3/7;
-}
-.CC{
-    grid-row: 5/9;
-}
-.IM{
-    grid-row: 8/11;
+
+@media (min-width: 1025px) {
+    .main-service-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(10, 1fr);
+        row-gap: 5px;
+
+        &>.title {
+            grid-row: 1/2;
+            grid-column: 1/4;
+        }
+
+        &>.SMM,
+        .ADS,
+        .CC,
+        .IM {
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+
+            & .text {
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            & img {
+                width: 8.5rem;
+            }
+        }
+
+
+    }
+
+    .SMM {
+        grid-row: 5/9;
+    }
+
+    .ADS {
+        grid-row: 3/7;
+    }
+
+    .CC {
+        grid-row: 5/9;
+    }
+
+    .IM {
+        grid-row: 7/11;
+    }
 }

@@ -6,23 +6,25 @@ function Header() {
             <header>
                 <nav>
                     <div className="head-logo">
-                        <img src="../src/assets/images/smalllogo.png" alt="Small logo on the navigation bar"/>
-                        <p>FARISH PROMOTIONS</p>
+                        <img src="../src/assets/images/smalllogo.png" alt="Small logo on the navigation bar" />
+                        <p id="p" className="lg" >FARISH PROMOTIONS</p>
                     </div>
                     <div className="head-nav">
-                        <p>Service</p>
-                        <p>About Us</p>
-                        <button>Work With Us</button>
+                        <a href="#service">Our Services</a>
+                        <a href="#about">About Us</a>
+                        <a href="#contact"><button>Work With Us</button></a>
+
                     </div>
                 </nav>
-                <div>
+                <div className="head-section">
                     <div className="head-texts">
                         <h1>Unlock your brands digital potential</h1>
-                        <p>Transforming online presence into tangible growth and measurable success</p>
-                        <button>Work With Us</button>
-                        
+                        <p className="lg" >Transforming online presence into tangible growth and measurable success</p>
+                        <a href="#contact"><button>Work With Us</button></a>
+
+
                     </div>
-                        <img src="../src/assets/images/biglogo.png" alt="" />
+                    <img src="../src/assets/images/biglogo.png" alt="" />
                 </div>
             </header>
         </>

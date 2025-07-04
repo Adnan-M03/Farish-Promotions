@@ -1,9 +1,12 @@
 <form action="https://formspree.io/f/mjkrkpkb" method="post">
-            <label for="name">Your name</label>
-            <input type="text" name="Name" id="name">
-            <label for="email">Your email</label>
-            <input type="email" name="Email" id="email">
-            <label for="Comment">What is your goal</label>
-            <textarea name="Additional-Comment" placeholder="Can be a single sentence" id="comment"></textarea>
-            <input type="submit" value="Connect">
-        </form>
+    <label for="name">Your name</label>
+    <input type="text" name="Name" id="name">
+    <label for="email">Your email</label>
+    <input type="email" name="Email" id="email">
+    <label for="Comment">What is your goal</label>
+    <textarea name="Additional-Comment" placeholder="Can be a single sentence" id="comment"></textarea>
+    <input type="submit" value="Connect">
+</form>
+
+
+        
