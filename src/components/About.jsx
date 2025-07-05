@@ -1,7 +1,9 @@
+import aboutme from "../assets/images/aboutme.png";
+
 function About() {
     return (
         <>
-            <div id="about" className="aboutSection">
+            <div id="about" className="aboutSection" style={{backgroundImage: `url(${aboutme})`}}>
                 <h2>About Us</h2>
                 <p className="sm" >At the heart of our agency is a commitment to helping businesses thrive in the dynamic digital landscape. We believe in a proactive, results-oriented approach to social media and digital marketing</p>
                 <a href="#contact"><button> Schedule Now </button></a>
