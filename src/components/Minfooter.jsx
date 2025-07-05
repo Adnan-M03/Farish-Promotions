@@ -1,8 +1,16 @@
+import smalllogo from "../assets/images/smalllogo.png"
+import logo from "../assets/images/logowriting2.png"
+import tg from "../assets/images/social/Vector(2).svg"
+import phone from "../assets/images/social/Vector.svg"
+import mail from "../assets/images/social/mail.svg"
+import ig from "../assets/images/social/Logo Instagram.svg"
+
 
 function Minfooter() {
     return (
         <>
-            <div className="map">
+            <div id="map" className="map">
+                <p className="map-bar sm">Come to our Location</p>
                 {/* <p>
                     <strong>Address:</strong> <br /> Bole Edna Mall,Gulf Aziz Building, no.203 <br />
                     <strong>Office Hours:</strong> <br /> Mon - Fri: 9:00 AM - 5:00 PM EAT
@@ -23,23 +31,23 @@ function Minfooter() {
             <div className="footer-grid">
                 <div className="first">
                     <div className="footlogo">
-                        <img src="../src/assets/images/smalllogo.png" alt="" />
-                        <img src="../src/assets/images/logowriting2.png" alt="" />
+                        <img src={smalllogo} alt="" />
+                        <img src={logo} alt="" />
 
                         <p className="xm" >Farish Promotion was born from a passion for seeing brands truly shine online. Our dedicated team is here to craft creative, results-driven strategies that help you connect and grow.</p>
                     </div>
                     <div className="socials">
                         <a href="https://t.me/ibrahimfarisss" target="_blank" rel="noopener noreferrer">
-                            <img src="../src/assets/images/social/Vector(2).svg" alt="" />
+                            <img src={tg} alt="" />
                         </a>
                         <a href="tel:+251944565300">
-                            <img src="../src/assets/images/social/Vector.svg" alt="" />
+                            <img src={phone} alt="" />
                         </a>
                         <a href="#contact">
-                            <img src="../src/assets/images/social/mail.svg" alt="" />
+                            <img src={mail} alt="" />
                         </a>
                         <a href="https://www.instagram.com/farishpromotions?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
-                            <img src="../src/assets/images/social/Logo Instagram.svg" alt="" />
+                            <img src={ig} alt="" />
                         </a>
                     </div>
                 </div>
@@ -58,7 +66,7 @@ function Minfooter() {
                 </div>
                 <div className="terms">
                     <p className="sm">© 2025 Farish Promotions. All rights reserved.</p>
-                    <p className="xm">Terms and Conditions</p>
+                    <p className="xm">Terms of Serice</p>
                     <p className="xm">Privacy Policy</p>
                     <p className="xm">Cookie Policy</p>
                 </div>

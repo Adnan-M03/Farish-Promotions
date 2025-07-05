@@ -77,7 +77,12 @@ p {
 }
 
 button {
+    transition: background-color 0.2s;
     cursor: pointer;
+}
+
+button:hover {
+    background: var(--color-orange-dark);
 }
 
 p {
@@ -129,10 +134,21 @@ h4 {
 }
 
 
-.main-service-grid,
-.contact-grid,
+.main-service-grid {
+    padding-top: var(--spacing-4xl);
+    padding-bottom: var(--spacing-2xl);
+}
+
+.contact-grid {
+    padding: var(--spacing-2xl);
+}
+
 .footer-grid {
-    padding: var(--spacing-section) 0 !important;
+    margin: 1rem 0;
+}
+
+.chooseSection {
+    padding: 6.5rem 0;
 }
 
 

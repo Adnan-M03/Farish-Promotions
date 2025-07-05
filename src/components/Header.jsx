@@ -1,12 +1,16 @@
-import "./css/header.css"
+import "./css/header.css";
+
+import smallLogo from "../assets/images/smalllogo.png"
+import bigLogo from "../assets/images/biglogo.png"
 
 function Header() {
+
     return (
         <>
             <header>
                 <nav>
                     <div className="head-logo">
-                        <img src="../src/assets/images/smalllogo.png" alt="Small logo on the navigation bar" />
+                        <img src={smallLogo} alt="Small logo on the navigation bar" />
                         <p id="p" className="lg" >FARISH PROMOTIONS</p>
                     </div>
                     <div className="head-nav">
@@ -24,13 +28,14 @@ function Header() {
 
 
                     </div>
-                    <img src="../src/assets/images/biglogo.png" alt="" />
+                    <img src={bigLogo} alt="" />
                 </div>
             </header>
         </>
         // <Nav>
         // <Hero> two columbs
     );
+
 }
 
 export default Header;

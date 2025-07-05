@@ -114,6 +114,7 @@ button {
             & .head-texts {
                 align-items: flex-start;
                 text-align: start;
+                margin-left: 3rem;
             }
 
             & img {
