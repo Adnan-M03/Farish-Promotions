@@ -112,6 +112,7 @@ button:not(.btn) {
 @media (min-width: 767px) {
     header {
         min-height: 60vh;
+        padding: var(--spacing-sm) var(--spacing-xl);
 
         & nav {
             justify-content: space-between;
@@ -145,10 +146,8 @@ button:not(.btn) {
 
 @media (min-width: 1025px) {
     header {
-        min-height: 90vh;
-        padding: 0 var(--spacing-4xl);
-        padding-left: var(--spacing-4xl);
-        padding-right: var(--spacing-3xl);
+        min-height: 95vh;
+        padding: 0 var(--spacing-3xl);
 
         & .head-texts {
             max-width: 55%;
