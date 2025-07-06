@@ -68,13 +68,13 @@ function Contact() {
                     {showThanks ? (
                         <div className="thank-you-message">
                             <h2>Thank you!</h2>
-                            <p className="sm">{statusMessage}</p>
+                            <p className="sm status">{statusMessage}</p>
                         </div>
                     ) : (
                         <>
                             <div className="texts">
                                 <h2>Let's discuss the idea</h2>
-                                <p className="sm">{statusMessage}</p>
+                                <p className="sm status">{statusMessage}</p>
                             </div>
                             <div className="input">
                                 <input className="fs-input" id="email" name="email" placeholder="Your email" required />

@@ -35,6 +35,19 @@ nav {
 
     & .head-nav {
         display: none;
+
+        & :nth-child(1),
+        :nth-child(2) {
+            /*hover*/
+            text-decoration: none;
+            color: var(--color-gray-50);
+            font-size: var(--font-size-base);
+            transition: color 150ms;
+        }
+
+        & a:not(#contact):hover {
+            color: var(--color-orange-light);
+        }
     }
 }
 
@@ -88,19 +101,14 @@ button {
 
         & nav {
             justify-content: space-between;
-            padding: 1rem 3rem;
+            padding: 1rem 1rem;
 
             & .head-nav {
                 display: flex;
                 gap: var(--spacing-md);
 
-                & :nth-child(1),
-                :nth-child(2) {
-                    /*hover*/
-                    text-decoration: none;
-                    color: var(--color-gray-50);
-                    font-size: var(--font-size-base);
-                }
+
+
             }
 
 
@@ -114,7 +122,7 @@ button {
             & .head-texts {
                 align-items: flex-start;
                 text-align: start;
-                margin-left: 3rem;
+                margin-left: 1rem;
             }
 
             & img {
@@ -131,6 +139,10 @@ button {
 
     header>.head-section img {
         width: 20rem;
+    }
+
+    header>nav {
+        padding: 1rem 2.5rem;
     }
 
 }
