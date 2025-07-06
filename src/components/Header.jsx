@@ -16,12 +16,12 @@ function Header() {
                     <div className="head-nav">
                         <a href="#service">Our Services</a>
                         <a href="#about">About Us</a>
-                        <a href="#contact"><button>Work With Us</button></a>
+                        <a href="#contact"><button className="btn" >Work With Us</button></a>
 
                     </div>
                 </nav>
                 <div className="head-section">
-                    <div className="head-texts">
+                    <div id="c" className="head-texts">
                         <h1>Unlock your brands digital potential</h1>
                         <p className="lg" >Transforming online presence into tangible growth and measurable success</p>
                         <a href="#contact"><button>Work With Us</button></a>

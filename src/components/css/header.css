@@ -36,7 +36,7 @@ nav {
     & .head-nav {
         display: none;
 
-        & :nth-child(1),
+        & :nth-child(1):not(.btn),
         :nth-child(2) {
             /*hover*/
             text-decoration: none;
@@ -87,12 +87,26 @@ nav+.head-section {
 
 
 button {
-    background: var(--color-orange-primary);
+
     color: var(--color-white);
     border: none;
     padding: var(--spacing-sm);
     font-size: var(--font-size-base);
     width: max-content;
+}
+
+button:not(.btn) {
+    background: var(--color-orange-primary);
+}
+
+.btn {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 .5px var(--color-orange-primary);
+    transition: background-color 150ms;
+}
+
+.btn:hover {
+    background-color: var(--color-brown-dark);
 }
 
 @media (min-width: 767px) {
@@ -101,7 +115,6 @@ button {
 
         & nav {
             justify-content: space-between;
-            padding: 1rem 1rem;
 
             & .head-nav {
                 display: flex;
@@ -116,13 +129,11 @@ button {
 
         & .head-section {
             flex-direction: row;
-            justify-content: space-around;
-            padding: 3rem 0;
+            justify-content: space-between;
 
             & .head-texts {
                 align-items: flex-start;
                 text-align: start;
-                margin-left: 1rem;
             }
 
             & img {
@@ -134,15 +145,27 @@ button {
 
 @media (min-width: 1025px) {
     header {
-        min-height: 95vh;
+        min-height: 90vh;
+        padding: 0 var(--spacing-4xl);
+        padding-left: var(--spacing-4xl);
+        padding-right: var(--spacing-3xl);
+
+        & .head-texts {
+            max-width: 55%;
+        }
     }
 
     header>.head-section img {
         width: 20rem;
     }
 
-    header>nav {
-        padding: 1rem 2.5rem;
+    header>nav>.head-logo>img {
+        width: 35px;
+        margin-left: -10px;
     }
+
+
+
+
 
 }
