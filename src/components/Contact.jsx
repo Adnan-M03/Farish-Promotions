@@ -54,7 +54,7 @@ function Contact() {
                     <a href="tel:+251944565300">
                         <div className="phone">
                             <img src={ph} alt="" />
-                            <p className="xs">0943072972 / 092575528</p>
+                            <p className="xs">0944565300 / 0990280671</p>
                         </div>
                     </a>
                     <a href="#map">
