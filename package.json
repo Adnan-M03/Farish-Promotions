@@ -2,7 +2,7 @@
   "name": "ibrahim",
   "version": "1.0.0",
   "description": "A Social Media Marketing Agency landing page.",
-  "main": "jQuery.js",
+  "main": "src/index.jsx",
   "homepage": "https://Adnan-M03.github.io/Farish-Promotions",
   "dependencies": {
     "browserslist": "^4.25.1",
@@ -38,7 +38,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --mode production",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
