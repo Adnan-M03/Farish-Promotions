@@ -46,7 +46,7 @@ function Minfooter() {
                         <a href="#contact">
                             <img src={mail} alt="" />
                         </a>
-                        <a href="https://www.instagram.com/farishpromotions?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/farishpromotions/" target="_blank" rel="noopener noreferrer">
                             <img src={ig} alt="" />
                         </a>
                     </div>

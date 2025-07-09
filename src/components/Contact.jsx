@@ -77,7 +77,7 @@ function Contact() {
                                 <p className="sm status">{statusMessage}</p>
                             </div>
                             <div className="input">
-                                <input className="fs-input" id="email" name="email" placeholder="Your email" required />
+                                <input className="fs-input" id="email" name="email" type="email" placeholder="Your email" required />
                                 <button style={{ background: "var(--color-near-black)", cursor: "pointer" }} className="fs-button" type="submit">Send</button>
                             </div>
                         </>
