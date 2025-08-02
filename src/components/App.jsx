@@ -8,27 +8,39 @@ import Contact from "./Contact";
 import Minfooter from "./Minfooter";
 
 import { useState, useEffect } from "react";
+import bigLogo from "../assets/images/biglogo.png";
+import aboutme from "../assets/images/aboutme.png";
 
 import "./css/index.css"
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
-    const handleLoad = () => {
-        setIsLoading(false);
-        console.log(isLoading);
-    }
-    useEffect(() => {
-        window.addEventListener("load", handleLoad);
-        return () => {
-            window.removeEventListener("load", handleLoad);
-        }
-    }, [])
+    const [imagesLoaded, setImagesLoaded] = useState(0);
+    const totalImages = 2; // Number of critical images
 
+    const handleImageLoad = () => {
+        setImagesLoaded(prev => {
+            const newCount = prev + 1;
+            if (newCount >= totalImages) {
+                setIsLoading(false);
+            }
+            return newCount;
+        });
+    };
+
+    // Fallback timeout
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setIsLoading(false);
+        }, 5000); // 5 second fallback
+
+        return () => clearTimeout(timeout);
+    }, []);
 
     return (
         <>
             <div className="appContainer" style={{
-                display: isLoading ? "hidden" : "visible"
+                display: isLoading ? "none" : "block"
             }}>
                 <Header />
                 <Main>
@@ -41,9 +53,27 @@ function App() {
                     <Minfooter />
                 </Footer>
             </div>
-            <div className="loader" style={{
-                visibility: isLoading ? "visible" : "hidden"
-            }} ></div>
+
+            {/* Preload critical images */}
+            <img
+                src={bigLogo}
+                alt=""
+                style={{ display: 'none' }}
+                onLoad={handleImageLoad}
+            />
+            <img
+                src={aboutme}
+                alt=""
+                style={{ display: 'none' }}
+                onLoad={handleImageLoad}
+            />
+
+            {isLoading && (
+                <div className="loader">
+                    <div className="spinner"></div>
+                    <p>Loading...</p>
+                </div>
+            )}
         </>
     );
 }

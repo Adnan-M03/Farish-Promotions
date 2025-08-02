@@ -79,6 +79,7 @@ p {
 button {
     transition: background-color 0.2s;
     cursor: pointer;
+    font-family: 'Inter', Arial, sans-serif;
 }
 
 button:hover {

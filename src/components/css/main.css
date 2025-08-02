@@ -144,8 +144,19 @@
             &>div {
                 display: flex;
                 align-items: center;
+            }
+        }
+    }
 
-                & choose-texts {}
+    @media (min-width: 1025px) {
+        .chooseSection .choose-grid div {
+            flex-direction: row;
+
+            & div {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+                padding-left: 1rem;
             }
         }
     }

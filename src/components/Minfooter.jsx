@@ -66,7 +66,7 @@ function Minfooter() {
                 </div>
                 <div className="terms">
                     <p className="sm">© 2025 Farish Promotions. All rights reserved.</p>
-                    <p className="xm">Terms of Serice</p>
+                    <p className="xm">Terms of Service</p>
                     <p className="xm">Privacy Policy</p>
                     <p className="xm">Cookie Policy</p>
                 </div>

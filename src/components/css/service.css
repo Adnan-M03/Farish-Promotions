@@ -24,7 +24,8 @@
     &>.SMM,
     .ADS,
     .CC,
-    .IM {
+    .IM,
+    .SD {
         justify-self: center;
         max-width: 40rem;
         margin: 1rem;
@@ -98,21 +99,20 @@
 
     .main-service-grid {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: repeat(9, 1fr);
-        row-gap: 5px;
+        row-gap: 10px;
         column-gap: 2rem;
-
-
 
         &>.title {
             grid-row: 1/2;
             grid-column: 1/4;
+            padding-bottom: 2.5rem;
         }
 
         &>.SMM,
         .ADS,
         .CC,
-        .IM {
+        .IM,
+        .SD {
             align-items: center;
             flex-direction: column;
             text-align: center;
@@ -132,25 +132,13 @@
 
 
     }
-
-    .SMM {
-        grid-row: 4/8;
-    }
-
-    .ADS {
-        grid-row: 2/6;
-    }
-
-    .CC {
-        grid-row: 4/8;
-    }
-
-    .IM {
-        grid-row: 6/10;
-    }
 }
 
-.SMM, .ADS, .CC, .IM {
+.SMM,
+.ADS,
+.CC,
+.IM,
+.SD {
     transition: all 1s ease-out;
 }
 
@@ -163,6 +151,7 @@
         transform: translateX(0) translateY(0) scale(0.7);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0) translateY(0) scale(1);
         opacity: 1;

@@ -1,11 +1,8 @@
 import { useEffect } from "react";
 import "./css/service.css";
 
-import slash from "../assets/images/vectorUnderline.svg"
-import SMM from "../assets/images/SMM 4.png"
-import Targ from "../assets/images/Targ ads 2.png"
-import Content from "../assets/images/Content 1.png"
-import Influence from "../assets/images/Influence 1.png"
+import slash from "../assets/images/vectorUnderline.svg";
+import services from "./services.js";
 
 function Service() {
     useEffect(() => {
@@ -13,7 +10,7 @@ function Service() {
             const sr = window.ScrollReveal();
 
             // All cards start from the same center position
-            const cards = ['.SMM', '.ADS', '.CC', '.IM'];
+            const cards = ['.SMM', '.ADS', '.CC', '.IM', '.SD'];
 
             cards.forEach((card, index) => {
                 sr.reveal(card, {
@@ -46,14 +43,25 @@ function Service() {
                     <h2>Our Expert <span>Services</span></h2>
                     <img src={slash} alt="" />
                 </div>
-                <div className="SMM">
-                    <img src={SMM} alt="" />
-                    <div className="text">
-                        <h4>Social Media Management</h4>
-                        <p className="xs" >From daily posting to community engagement and performance monitoring, we take the hassle out of managing your social media channels. We build a consistent, engaging online presence that fosters brand loyalty and expands your reach.</p>
-                    </div>
-                </div>
-                <div className="ADS">
+
+                {services.map((card, index) => {
+                    return (
+                        <div key={index} className={card.class}>
+                            <img src={card.icon} alt={`Image of ${card.title} icon`} />
+                            <div className="text">
+                                <h4>{card.title}</h4>
+                                <p className="xs" >{card.description}</p>
+                            </div>
+                        </div>
+                    )
+                })}
+
+
+            </div>
+        </>
+    )
+}/*
+    <div className="ADS">
                     <img src={Targ} alt="" />
                     <div className="text">
                         <h4>Social Media Ads</h4>
@@ -74,9 +82,6 @@ function Service() {
                         <p className="xs">Leverage authentic voices to amplify your message. We identify the right influencers for your brand, develop strategic campaigns, and manage collaborations to expand your reach and build trust with new audiences</p>
                     </div>
                 </div>
-            </div>
-        </>
-    )
-}
+*/
 
 export default Service;

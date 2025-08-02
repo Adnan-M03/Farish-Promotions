@@ -20,7 +20,7 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://your-netlify-domain.netlify.app/">
+  <meta property="og:url" content="https://farishpromotions.netlify.app/">
   <meta property="og:title" content="Farish Promotions - Digital Marketing Agency">
   <meta property="og:description"
     content="Transform your business with our expert social media marketing services. We help businesses thrive in the digital landscape with strategic content, targeted advertising, and results-driven campaigns.">
@@ -28,11 +28,11 @@
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://your-netlify-domain.netlify.app/">
+  <meta property="twitter:url" content="https://farishpromotions.netlify.app/">
   <meta property="twitter:title" content="Farish Promotions - Digital Marketing Agency">
   <meta property="twitter:description"
     content="Transform your business with our expert social media marketing services. We help businesses thrive in the digital landscape with strategic content, targeted advertising, and results-driven campaigns.">
-  <meta property="twitter:image" content="./smalllogo.png">
+  <meta property="twitter:image" content="./meta-logo.png">
 
   <!-- Additional Meta Tags -->
   <meta name="theme-color" content="#ffffff">
@@ -47,6 +47,35 @@
   <link rel="manifest" href="site.webmanifest">
 
   <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- Service Worker Registration -->
+  <script>
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('SW registered: ', registration);
+
+            // Check for updates
+            registration.addEventListener('updatefound', () => {
+              const newWorker = registration.installing;
+              newWorker.addEventListener('statechange', () => {
+                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                  // New version available
+                  if (confirm('New version available! Reload to update?')) {
+                    window.location.reload();
+                  }
+                }
+              });
+            });
+          })
+          .catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+  </script>
 
   <!-- Structured Data -->
   <script type="application/ld+json">
