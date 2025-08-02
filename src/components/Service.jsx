@@ -10,7 +10,7 @@ function Service() {
             const sr = window.ScrollReveal();
 
             // All cards start from the same center position
-            const cards = ['.SMM', '.ADS', '.CC', '.IM', '.SD'];
+            const cards = ['.SMM', '.ADS', '.CC', '.IM', '.SD', '.WD'];
 
             cards.forEach((card, index) => {
                 sr.reveal(card, {

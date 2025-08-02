@@ -3,44 +3,45 @@ import Targ from "../assets/images/Targ ads 2.png"
 import Content from "../assets/images/Content 1.png"
 import Influence from "../assets/images/Influence 1.png"
 import Web from "../assets/images/Web.png"
+import Consultation from "../assets/images/Consultation.png"
 import SEO from "../assets/images/SEO.png"
 
 const services = [
     {
-        title: "Social Media Management",
+        title: "Social Media Marketing",
         class: "SMM",
-        description: "From daily posting to community engagement and performance monitoring, we take the hassle out of managing your social media channels. We build a consistent, engaging online presence that fosters brand loyalty and expands your reach.",
-        icon: SMM
-    },
-    {
-        title: "Social Media Ads",
-        class: "ADS",
-        description: "Stop guessing and start targeting. We design and execute precision-targeted social media advertising campaigns across key platforms, maximizing your budget to reach qualified leads and achieve your specific business objectives",
+        description: "Build meaningful connections with your audience through strategic social media campaigns. We manage your social presence, create engaging content, and run targeted advertising campaigns that increase brand awareness and drive conversions.",
         icon: Targ
     },
     {
-        title: "Content Creation",
+        title: "Strategy & Branding",
         class: "CC",
-        description: "Compelling content is the fuel for social media success. We craft captivating visuals, engaging captions, and valuable stories that resonate with your target audience, sparking conversations and driving action.",
-        icon: Content
+        description: "We develop comprehensive digital strategies that align with your brand vision and business goals. From brand identity development to market positioning, we create cohesive strategies that drive long-term growth and establish your brand as an industry leader.",
+        icon: SMM
     },
     {
-        title: "Influencer Marketing",
+        title: "Content & Influencers",
         class: "IM",
-        description: "Leverage authentic voices to amplify your message. We identify the right influencers for your brand, develop strategic campaigns, and manage collaborations to expand your reach and build trust with new audiences",
+        description: "Create compelling content that resonates with your audience and leverage influencer partnerships to amplify your message. We develop authentic content strategies and manage influencer collaborations that expand your reach and build trust with new audiences.",
         icon: Influence
+    },
+    {
+        title: "Web Design & Optimization",
+        class: "WD",
+        description: "Transform your online presence with stunning, user-centric website designs that convert visitors into customers. We optimize for speed, mobile responsiveness, and user experience to ensure your website performs at its best across all devices and platforms.",
+        icon: Web
     },
     {
         title: "SEO",
         class: "SD",
-        description: "Leverage authentic voices to amplify your message. We identify the right influencers for your brand, develop strategic campaigns, and manage collaborations to expand your reach and build trust with new audiences",
+        description: "Boost your search engine rankings and drive organic traffic to your website. Our SEO strategies focus on keyword optimization, technical improvements, and content enhancement to help you rank higher and attract qualified leads from search engines.",
         icon: SEO
     },
     {
-        title: "Web Design and Optimization",
-        class: "SD",
-        description: "Leverage authentic voices to amplify your message. We identify the right influencers for your brand, develop strategic campaigns, and manage collaborations to expand your reach and build trust with new audiences",
-        icon: Web
+        title: "Advisory Consultation",
+        class: "IM",
+        description: "Get expert guidance and strategic insights to navigate your digital marketing journey. Our experienced consultants provide personalized advice, industry analysis, and actionable recommendations to help you make informed decisions and achieve your business objectives.",
+        icon: Consultation
     }
 ];
 

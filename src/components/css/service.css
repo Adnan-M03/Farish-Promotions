@@ -25,7 +25,8 @@
     .ADS,
     .CC,
     .IM,
-    .SD {
+    .SD,
+    .WD {
         justify-self: center;
         max-width: 40rem;
         margin: 1rem;
@@ -85,7 +86,9 @@
     &>.SMM,
     .ADS,
     .CC,
-    .IM {
+    .IM,
+    .SD,
+    .WD {
         & img {
             width: 6rem;
         }
@@ -101,6 +104,7 @@
         grid-template-columns: 1fr 1fr 1fr;
         row-gap: 10px;
         column-gap: 2rem;
+        justify-content: center;
 
         &>.title {
             grid-row: 1/2;
@@ -112,7 +116,8 @@
         .ADS,
         .CC,
         .IM,
-        .SD {
+        .SD,
+        .WD {
             align-items: center;
             flex-direction: column;
             text-align: center;
@@ -131,6 +136,7 @@
         }
 
 
+
     }
 }
 
@@ -138,7 +144,8 @@
 .ADS,
 .CC,
 .IM,
-.SD {
+.SD,
+.WD {
     transition: all 1s ease-out;
 }
 
