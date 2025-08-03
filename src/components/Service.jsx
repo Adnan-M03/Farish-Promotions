@@ -1,10 +1,74 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./css/service.css";
 
 import slash from "../assets/images/vectorUnderline.svg";
 import services from "./services.js";
 
 function Service() {
+    const [imagesLoaded, setImagesLoaded] = useState(0);
+    const [scrollRevealInitialized, setScrollRevealInitialized] = useState(false);
+
+    // Step 1: Wait for all service images to load
+    useEffect(() => {
+        const serviceImages = document.querySelectorAll('.service-card img');
+        let loadedCount = 0;
+
+        const handleImageLoad = () => {
+            loadedCount++;
+            setImagesLoaded(loadedCount);
+
+            // When all images are loaded, start ScrollReveal
+            if (loadedCount === serviceImages.length) {
+                setTimeout(() => {
+                    initializeScrollReveal();
+                }, 500); // Small delay to ensure DOM is ready
+            }
+        };
+
+        // Check if images are already loaded
+        serviceImages.forEach(img => {
+            if (img.complete) {
+                handleImageLoad();
+            } else {
+                img.addEventListener('load', handleImageLoad);
+                img.addEventListener('error', handleImageLoad); // Count errors too
+            }
+        });
+
+        // Fallback: if no images found, start ScrollReveal anyway
+        if (serviceImages.length === 0) {
+            setTimeout(() => {
+                initializeScrollReveal();
+            }, 1000);
+        }
+    }, []);
+
+    // Step 2: Initialize ScrollReveal after images are loaded
+    const initializeScrollReveal = () => {
+        if (typeof window !== 'undefined' && window.ScrollReveal && !scrollRevealInitialized) {
+            const sr = window.ScrollReveal();
+
+            const cards = ['.SMM', '.CC', '.IM', '.WD', '.SD', '.AC'];
+
+            cards.forEach((card, index) => {
+                sr.reveal(card, {
+                    delay: index * 150,
+                    distance: '0px',
+                    origin: 'center',
+                    duration: 800,
+                    easing: 'ease-out',
+                    scale: 0.7,
+                    opacity: 0,
+                    beforeReveal: (el) => {
+                        el.classList.add('fan-out');
+                    }
+                });
+            });
+
+            setScrollRevealInitialized(true);
+            console.log('ScrollReveal initialized after images loaded');
+        }
+    };
 
     return (
         <>
@@ -21,42 +85,18 @@ function Service() {
 
                 {services.map((card, index) => {
                     return (
-                        <div key={index} className={card.class}>
+                        <div key={index} className={`${card.class} service-card`}>
                             <img src={card.icon} alt={`Image of ${card.title} icon`} />
                             <div className="text">
                                 <h4>{card.title}</h4>
-                                <p className="xs" >{card.description}</p>
+                                <p className="xs">{card.description}</p>
                             </div>
                         </div>
                     )
                 })}
-
-
             </div>
         </>
     )
-}/*
-    <div className="ADS">
-                    <img src={Targ} alt="" />
-                    <div className="text">
-                        <h4>Social Media Ads</h4>
-                        <p className="xs">Stop guessing and start targeting. We design and execute precision-targeted social media advertising campaigns across key platforms, maximizing your budget to reach qualified leads and achieve your specific business objectives</p>
-                    </div>
-                </div>
-                <div className="CC">
-                    <img src={Content} alt="" />
-                    <div className="text">
-                        <h4>Content Creation</h4>
-                        <p className="xs">Compelling content is the fuel for social media success. We craft captivating visuals, engaging captions, and valuable stories that resonate with your target audience, sparking conversations and driving action.</p>
-                    </div>
-                </div>
-                <div className="IM">
-                    <img src={Influence} alt="" />
-                    <div className="text">
-                        <h4>Influencer Marketing</h4>
-                        <p className="xs">Leverage authentic voices to amplify your message. We identify the right influencers for your brand, develop strategic campaigns, and manage collaborations to expand your reach and build trust with new audiences</p>
-                    </div>
-                </div>
-*/
+}
 
 export default Service;

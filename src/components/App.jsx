@@ -36,36 +36,6 @@ function App() {
 
         return () => clearTimeout(timeout);
     }, []);
-
-    useEffect(() => {
-        // Add delay to wait for images to load
-        const timer = setTimeout(() => {
-            if (typeof window !== 'undefined' && window.ScrollReveal) {
-                const sr = window.ScrollReveal();
-
-                const cards = ['.SMM', '.CC', '.IM', '.WD', '.SD', '.AC'];
-
-                cards.forEach((card, index) => {
-                    sr.reveal(card, {
-                        delay: index * 150,
-                        distance: '0px',
-                        origin: 'center',
-                        duration: 800,
-                        easing: 'ease-out',
-                        scale: 0.7,
-                        opacity: 0,
-                        beforeReveal: (el) => {
-                            el.classList.add('fan-out');
-                        }
-                    });
-                });
-            }
-        }, 1000); // Wait 1 second before starting ScrollReveal
-
-        // Cleanup timeout if component unmounts
-        return () => clearTimeout(timer);
-    }, []);
-
     return (
         <>
             <div className="appContainer" style={{
