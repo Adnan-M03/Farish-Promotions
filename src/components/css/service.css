@@ -26,7 +26,8 @@
     .CC,
     .IM,
     .SD,
-    .WD {
+    .WD,
+    .AC {
         justify-self: center;
         max-width: 40rem;
         margin: 1rem;
@@ -88,7 +89,8 @@
     .CC,
     .IM,
     .SD,
-    .WD {
+    .WD,
+    .AC {
         & img {
             width: 6rem;
         }
@@ -117,7 +119,8 @@
         .CC,
         .IM,
         .SD,
-        .WD {
+        .WD,
+        .AC {
             align-items: center;
             flex-direction: column;
             text-align: center;
@@ -145,7 +148,8 @@
 .CC,
 .IM,
 .SD,
-.WD {
+.WD,
+.AC {
     transition: all 1s ease-out;
 }
 

@@ -39,7 +39,7 @@ const services = [
     },
     {
         title: "Advisory Consultation",
-        class: "IM",
+        class: "AC",
         description: "Get expert guidance and strategic insights to navigate your digital marketing journey. Our experienced consultants provide personalized advice, industry analysis, and actionable recommendations to help you make informed decisions and achieve your business objectives.",
         icon: Consultation
     }

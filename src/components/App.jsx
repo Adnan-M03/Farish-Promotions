@@ -37,6 +37,30 @@ function App() {
         return () => clearTimeout(timeout);
     }, []);
 
+    useEffect(() => {
+        if (typeof window !== 'undefined' && window.ScrollReveal) {
+            const sr = window.ScrollReveal();
+
+            // Update to match your actual class names
+            const cards = ['.SMM', '.CC', '.IM', '.WD', '.SD', '.AC']; // Advisory Consultation
+
+            cards.forEach((card, index) => {
+                sr.reveal(card, {
+                    delay: index * 150,
+                    distance: '0px',
+                    origin: 'center',
+                    duration: 1000,
+                    easing: 'ease-out',
+                    scale: 0.7,
+                    opacity: 0,
+                    beforeReveal: (el) => {
+                        el.classList.add('fan-out');
+                    }
+                });
+            });
+        }
+    }, []); // can add this delay :const timer = setTimeout(() => {
+
     return (
         <>
             <div className="appContainer" style={{
@@ -69,8 +93,8 @@ function App() {
             />
 
             {isLoading && (
-                <div className="loader">
-                    <div className="spinner"></div>
+                <div className="spinner">
+                    <div className="loader"></div>
                     <p>Loading...</p>
                 </div>
             )}

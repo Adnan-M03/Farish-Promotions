@@ -5,31 +5,6 @@ import slash from "../assets/images/vectorUnderline.svg";
 import services from "./services.js";
 
 function Service() {
-    useEffect(() => {
-        if (typeof window !== 'undefined' && window.ScrollReveal) {
-            const sr = window.ScrollReveal();
-
-            // All cards start from the same center position
-            const cards = ['.SMM', '.ADS', '.CC', '.IM', '.SD', '.WD'];
-
-            cards.forEach((card, index) => {
-                sr.reveal(card, {
-                    delay: index * 150, // Staggered delay
-                    distance: '0px',
-                    origin: 'center',
-                    duration: 1000,
-                    easing: 'ease-out',
-                    scale: 0.7,
-                    opacity: 0,
-                    // Each card moves to its final position
-                    beforeReveal: (el) => {
-                        // Add a class for custom CSS animation
-                        el.classList.add('fan-out');
-                    }
-                });
-            });
-        }
-    }, []);
 
     return (
         <>
